@@ -214,7 +214,20 @@ public class UI implements ActionListener {
          }
       }
 
+      if(source == butAdd || source == butMinus || source == butMultiply || source == butDivide ||
+      source == butxpowerofy || source == butSquare || source == butSquareRoot || source == butOneDevidedBy)
+      {
+         simpleArithmetics(source);
+      }
+      else{
+         complexArithmetics(source);
+      }
+      
+      text.selectAll();
+   }
 
+   private void simpleArithmetics(final Object source)
+   {
       if (source == butAdd) {
          writer(calc.calculateBi(Calculator.BiOperatorModes.ADD, reader()));
       }
@@ -223,47 +236,51 @@ public class UI implements ActionListener {
       }
       else if (source == butMultiply) {
          writer(calc.calculateBi(Calculator.BiOperatorModes.MULTIPLY,
-                                 reader()));
+                 reader()));
       }
       else if (source == butDivide) {
          writer(calc
-                   .calculateBi(Calculator.BiOperatorModes.DIVIDE, reader()));
+                 .calculateBi(Calculator.BiOperatorModes.DIVIDE, reader()));
       }
       else if (source == butxpowerofy) {
          writer(calc
-                   .calculateBi(Calculator.BiOperatorModes.XPOWEROFY, reader()));
+                 .calculateBi(Calculator.BiOperatorModes.XPOWEROFY, reader()));
       }
       else if (source == butSquare) {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.SQUARE,
-                                   reader()));
+                 reader()));
       }
       else if (source == butSquareRoot) {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.SQUARE_ROOT,
-                                   reader()));
+                 reader()));
       }
       else if (source == butOneDevidedBy) {
          writer(calc.calculateMono(
-                                   Calculator.MonoOperatorModes.ONE_DIVIDED_BY, reader()));
+                 Calculator.MonoOperatorModes.ONE_DIVIDED_BY, reader()));
       }
-      else if (source == butCos) {
-         writer(calc.calculateMono(Calculator.MonoOperatorModes.COS,
-                                   reader()));
+   }
+
+   private void complexArithmetics(final Object source)
+   {
+      if (source == butCos) {
+      writer(calc.calculateMono(Calculator.MonoOperatorModes.COS,
+              reader()));
       }
       else if (source == butSin) {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.SIN,
-                                   reader()));
+                 reader()));
       }
       else if (source == butTan) {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.TAN,
-                                   reader()));
+                 reader()));
       }
       else if (source == butlog) {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.LOG,
-                                   reader()));
+                 reader()));
       }
       else if (source == butrate) {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.RATE,
-                                   reader()));
+                 reader()));
       }
       else if(source == butabs){
          writer(calc.calculateMono(Calculator.MonoOperatorModes.ABS, reader()));
@@ -277,8 +294,6 @@ public class UI implements ActionListener {
       else if (source == butBinary) {
          parsetoBinary();
       }
-      
-      text.selectAll();
    }
    
    private void parsetoBinary() {
