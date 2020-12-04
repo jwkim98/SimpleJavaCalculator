@@ -48,9 +48,6 @@ public class Calculator {
         if (mode == BiOperatorModes.XPOWEROFY) {
             return pow(num1,num2);
         }
-
-        // never reach
-        throw new Error();
     }
 
     public Double calculateBi(BiOperatorModes newMode, Double num) {
