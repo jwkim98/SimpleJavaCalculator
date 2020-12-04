@@ -17,7 +17,7 @@ public class CalculatorTest {
         assertEquals(cal.calculateBi(Calculator.BiOperatorModes.DIVIDE, 2.0), new Double(6.0));
         assertEquals(cal.calculateEqual(3.0), new Double(2.0));
 
-        cal.calculateBi(Calculator.BiOperatorModes.multiply, 6.5);
+        cal.calculateBi(Calculator.BiOperatorModes.MULTIPLY, 6.5);
         assertEquals(cal.calculateBi(Calculator.BiOperatorModes.XPOWEROFY, 7.3), new Double(6.5*7.3));
         assertEquals(cal.calculateEqual(3.0), new Double(Math.pow(6.5*7.3, 3.0)));
     }
