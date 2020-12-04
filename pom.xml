@@ -51,12 +51,6 @@
         </dependency>
     </dependencies>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>pvsstudio-maven-repo</id>
-            <url>http://files.viva64.com/java/pvsstudio-maven-repository/</url>
-        </pluginRepository>
-    </pluginRepositories>
 
     <build>
         <plugins>
@@ -66,15 +60,9 @@
                 <version>2.22.0</version>
             </plugin>
             <plugin>
-                <groupId>com.pvsstudio</groupId>
-                <artifactId>pvsstudio-maven-plugin</artifactId>
-                <version>7.10.43221</version>
-                <configuration>
-                    <analyzer>
-                        <outputType>text</outputType>
-                        <outputFile>src/output.txt</outputFile>
-                    </analyzer>
-                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.14.0</version>
             </plugin>
         </plugins>
     </build>
@@ -161,7 +149,29 @@
                                 </reports>
                             </reportSet>
                         </reportSets>
-
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-pmd-plugin</artifactId>
+                        <version>3.14.0</version>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-pmd-plugin</artifactId>
+                        <version>3.14.0</version>
+                        <configuration>
+                            <linkXref>true</linkXref>
+                            <sourceEncoding>utf-8</sourceEncoding>
+                            <minimumTokens>100</minimumTokens>
+                            <targetJdk>1.5</targetJdk>
+                            <excludes>
+                                <exclude>**/*Bean.java</exclude>
+                                <exclude>**/generated/*.java</exclude>
+                            </excludes>
+                            <excludeRoots>
+                                <excludeRoot>target/generated-sources/stubs</excludeRoot>
+                            </excludeRoots>
+                        </configuration>
                     </plugin>
                 </plugins>
             </reporting>
