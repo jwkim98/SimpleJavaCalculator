@@ -8,6 +8,8 @@
 
 package simplejavacalculator;
 
+import java.util.logging.Logger;
+
 public class SimpleJavaCalculator {
    
    public static void main(String[] args) {
@@ -16,7 +18,7 @@ public class SimpleJavaCalculator {
          uiCal.init();
       }
       catch (Exception e) {
-         System.out.println(e.getMessage());   
+         System.out.println(e.getMessage());
       }
       
    }
