@@ -213,79 +213,68 @@ public class UI implements ActionListener {
             return;
          }
       }
-      
+
+
       if (source == butAdd) {
-         writer(calc.calculateBi(Calculator.BiOperatorModes.add, reader()));
+         writer(calc.calculateBi(Calculator.BiOperatorModes.ADD, reader()));
       }
-      
-      if (source == butMinus) {
-         writer(calc.calculateBi(Calculator.BiOperatorModes.minus, reader()));
+      else if (source == butMinus) {
+         writer(calc.calculateBi(Calculator.BiOperatorModes.MINUS, reader()));
       }
-      
-      if (source == butMultiply) {
-         writer(calc.calculateBi(Calculator.BiOperatorModes.multiply,
+      else if (source == butMultiply) {
+         writer(calc.calculateBi(Calculator.BiOperatorModes.MULTIPLY,
                                  reader()));
       }
-      
-      if (source == butDivide) {
+      else if (source == butDivide) {
          writer(calc
-                   .calculateBi(Calculator.BiOperatorModes.divide, reader()));
+                   .calculateBi(Calculator.BiOperatorModes.DIVIDE, reader()));
       }
-      if (source == butxpowerofy) {
+      else if (source == butxpowerofy) {
          writer(calc
-                   .calculateBi(Calculator.BiOperatorModes.xpowerofy, reader()));
+                   .calculateBi(Calculator.BiOperatorModes.XPOWEROFY, reader()));
       }
-      
-      if (source == butSquare) {
-         writer(calc.calculateMono(Calculator.MonoOperatorModes.square,
+      else if (source == butSquare) {
+         writer(calc.calculateMono(Calculator.MonoOperatorModes.SQUARE,
                                    reader()));
       }
-      
-      if (source == butSquareRoot) {
-         writer(calc.calculateMono(Calculator.MonoOperatorModes.squareRoot,
+      else if (source == butSquareRoot) {
+         writer(calc.calculateMono(Calculator.MonoOperatorModes.SQUARE_ROOT,
                                    reader()));
       }
-      
-      if (source == butOneDevidedBy) {
+      else if (source == butOneDevidedBy) {
          writer(calc.calculateMono(
-                                   Calculator.MonoOperatorModes.oneDevidedBy, reader()));
+                                   Calculator.MonoOperatorModes.ONE_DIVIDED_BY, reader()));
       }
-      
-      if (source == butCos) {
-         writer(calc.calculateMono(Calculator.MonoOperatorModes.cos,
+      else if (source == butCos) {
+         writer(calc.calculateMono(Calculator.MonoOperatorModes.COS,
                                    reader()));
       }
-      
-      if (source == butSin) {
-         writer(calc.calculateMono(Calculator.MonoOperatorModes.sin,
+      else if (source == butSin) {
+         writer(calc.calculateMono(Calculator.MonoOperatorModes.SIN,
                                    reader()));
       }
-      
-      if (source == butTan) {
-         writer(calc.calculateMono(Calculator.MonoOperatorModes.tan,
+      else if (source == butTan) {
+         writer(calc.calculateMono(Calculator.MonoOperatorModes.TAN,
                                    reader()));
       }
-      if (source == butlog) {
-         writer(calc.calculateMono(Calculator.MonoOperatorModes.log,
+      else if (source == butlog) {
+         writer(calc.calculateMono(Calculator.MonoOperatorModes.LOG,
                                    reader()));
       }
-      if (source == butrate) {
-         writer(calc.calculateMono(Calculator.MonoOperatorModes.rate,
+      else if (source == butrate) {
+         writer(calc.calculateMono(Calculator.MonoOperatorModes.RATE,
                                    reader()));
       }
-      if(source == butabs){
-         writer(calc.calculateMono(Calculator.MonoOperatorModes.abs, reader()));
+      else if(source == butabs){
+         writer(calc.calculateMono(Calculator.MonoOperatorModes.ABS, reader()));
       }
-      
-      if (source == butEqual) {
+      else if (source == butEqual) {
          writer(calc.calculateEqual(reader()));
       }
-      
-      if (source == butCancel) {
+      else if (source == butCancel) {
          writer(calc.reset());
       }
-      
-      if (source == butBinary) {
+      else if (source == butBinary) {
          parsetoBinary();
       }
       
