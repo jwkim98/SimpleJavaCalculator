@@ -1,9 +1,9 @@
 /**
- * @name        Simple Java Calculator
- * @file        Calculator.java
- * @author      SORIA Pierre-Henry
- * @copyright   Copyright Pierre-Henry SORIA, All Rights Reserved.
- * @license     Apache (http://www.apache.org/licenses/LICENSE-2.0)
+ * @name Simple Java Calculator
+ * @file Calculator.java
+ * @author SORIA Pierre-Henry
+ * @copyright Copyright Pierre-Henry SORIA, All Rights Reserved.
+ * @license Apache (http://www.apache.org/licenses/LICENSE-2.0)
  */
 
 package simplejavacalculator;
@@ -22,7 +22,8 @@ public class Calculator {
         SQUARE, SQUARE_ROOT, ONE_DIVIDED_BY, COS, SIN, TAN, LOG, RATE, ABS
     }
 
-    private Double num1, num2;
+    private Double num1;
+    private Double num2;
     private BiOperatorModes mode = BiOperatorModes.NORMAL;
 
     private Double calculateBiImpl() {
@@ -46,7 +47,7 @@ public class Calculator {
             return num1 / num2;
         }
         if (mode == BiOperatorModes.XPOWEROFY) {
-            return pow(num1,num2);
+            return pow(num1, num2);
         }
 
         // never reach
@@ -109,9 +110,9 @@ public class Calculator {
             return log10(num);
         }
         if (newMode == MonoOperatorModes.RATE) {
-           return num / 100;
+            return num / 100;
         }
-        if (newMode == MonoOperatorModes.ABS){
+        if (newMode == MonoOperatorModes.ABS) {
             return Math.abs(num);
         }
 

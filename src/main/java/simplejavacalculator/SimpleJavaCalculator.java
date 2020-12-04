@@ -8,8 +8,6 @@
 
 package simplejavacalculator;
 
-import java.util.logging.Logger;
-
 public class SimpleJavaCalculator {
    
    public static void main(String[] args) {
